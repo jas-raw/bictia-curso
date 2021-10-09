@@ -1,0 +1,82 @@
+body{
+    margin: 0;
+}
+header{
+    padding-top: 4em;
+}
+a{
+    text-decoration: none;
+    color: aliceblue;
+    background-color: blue;
+    padding: 0.5em;
+}
+.mid{
+    width: 30vw;
+}
+.d-flex{
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+}
+.wave{
+    height: 150px;
+    overflow: hidden;
+    width: 100%;
+}
+.bg-red{
+    background-color: red;
+}
+.bg-violet{
+    background-color: blueviolet;
+}
+.img{
+    width: 20vw;
+}
+.img-2{
+    width: 100%;
+}
+.title{
+    color: aliceblue;
+    font-size: 4em;
+    font-weight: bold;
+}
+.sub{
+    color: aliceblue;
+    text-decoration: dotted;
+}
+.orden{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.list{
+    text-align: left;
+}
+.ml-2{
+    margin-left: 2em;
+}
+.container{
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+}
+.footer{
+    color: aliceblue;
+    background-color: blue;
+    padding: 2em;
+}
+.px-2{
+    padding: 1.5em;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+}
+.col{
+    display: flex;
+    flex-direction: column;
+}
+.center{
+    justify-content: center;
+}

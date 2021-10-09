@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/consulta.css">
+    <title>Consultas</title>
+</head>
+<body>
+    <header>
+        <div class="row center bg-black">
+            <nav class="col">
+                <ul>
+                    <li>
+                        <a class="link" href="index.html">Notas</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+                <div class="row center">
+                    <div class="col">
+                        <h1>Consultar datos</h1>
+                    </div>
+                </div>
+                <div class="row center">
+                    <div class="col w-50">
+                        <form action="">
+                            <div class="m-2 between d-flex">
+                                <label for="consultaId">ID a consultar</label>
+                                <input class='input' type="number" id="searchId">
+                            </div>
+                            <div class="around d-flex">
+                                <button class="btn m-2" id="search">Buscar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="row center">
+                    <div class="col" id="data"></div>
+                </div>
+        </div>
+    </main>
+    <script src="assets/js/consulta.js"></script>
+</body>
+</html>

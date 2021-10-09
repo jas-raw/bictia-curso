@@ -1,0 +1,78 @@
+:root{
+    --header-bg: gray;
+    --header-color: aliceblue;
+    --lateral: blue;
+    --btn-col: blue;
+}
+.header{
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--header-bg);
+    align-items: center;
+}
+.header-text{
+    color: var(--header-color);
+}
+.left, .rigth{
+    max-width: 50%;
+    padding: 1em;
+}
+.img{
+    width: 9em;
+    padding: 1em;
+    border-radius: 10%;
+    display: block;
+    object-fit: contain;
+    transition: all 1s;
+}
+.body{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.languaje{
+    display: block;
+}
+.lnk{
+    color: inherit;
+    text-decoration: none;
+}
+.flex-center{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1em;
+}
+.footer{
+    text-align: center;
+}
+.d-block{
+    display: block;
+}
+.btn{
+    background-color: transparent;
+    border: 1px solid var(--btn-col);
+    border-radius: 5px;
+}
+.btn:hover{
+    color: white;
+    background-color: var(--btn-col);
+}
+.btn:focus{
+    box-shadow: none;
+}
+.git:hover{
+    color: blueviolet
+}
+.linked:hover{
+    color: blue;
+}
+.languaje:hover{
+    color: green;
+}
+.img:hover{
+    width: 10em;
+    padding: 0;
+}
+li, ul{
+    list-style: none;
+}

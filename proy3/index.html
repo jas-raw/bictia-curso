@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <title>Notas</title>
+</head>
+<body>
+    <header>
+        <div class="row center bg-black">
+            <nav class="col">
+                <ul>
+                    <li>
+                        <a class="link" href="consulta.html">Consultar</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="row center">
+                <div class="col">
+                    <h1>Notas</h1>
+                </div>
+            </div>
+            <div class="row center">
+                <div class="col w-50">
+                    <form action="">
+                        <div class="m-2 between d-flex">
+                            <label for="studentId">ID del estudiante</label>
+                            <input class="input" type="number" id='studentId'>
+                        </div>
+                        <div class="m-2 between d-flex">
+                            <label for="studentName">Nombre del estudiante</label>
+                            <input class="input" type="text" id='studentName'>
+                        </div>
+                        <div class="m-2 between d-flex">
+                            <label for="notes">Nota</label>
+                            <input class="input" type="number" max="5" min="0" step="0.1" id='notes'>
+                        </div>
+                        <div class="around d-flex">
+                            <button class='btn m-2' id="saveNotes">Guardar Notas</button>
+                            <button class='btn m-2' id="submitStudent">Finalizar</button>
+                        </div>
+                        </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="assets/js/index.js"></script>
+</body>
+</html>
