@@ -3,6 +3,8 @@ var note = document.getElementById("notes")
 
 document.getElementById('saveNotes').addEventListener("click", (e) => {
     e.preventDefault()
+    const reg = document.getElementById('notesReg')
+    reg.innerHTML = "<strong>Notas registradas: </strong>"
     if(note.value){
         if(note.value <= 5 && note.value >= 0){
             notes.push(note.value)
@@ -14,6 +16,13 @@ document.getElementById('saveNotes').addEventListener("click", (e) => {
     }else{
         alert('Debes poner una nota a guardar')
     }
+    notes.forEach((it, index) => {
+        let text = ''
+        if(index !== 0){
+            text = ' - '
+        }
+        reg.innerHTML = reg.innerHTML + text + it
+    })
 })
 
 document.getElementById("submitStudent").addEventListener("click", (e) => {
