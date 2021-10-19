@@ -4,8 +4,19 @@
 }
 
 body{
-    background-color: #edbb99;
+    background-color: black;
+    color: aliceblue;
 }
 .h-100{
     min-height: 100vh;
+}
+.form{
+    font-size: large;
+}
+.title{
+    color: green;
+}
+.title:hover{
+    color: aqua;
+    text-decoration: underline;
 }
