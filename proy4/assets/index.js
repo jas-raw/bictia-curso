@@ -9,9 +9,9 @@ $("#nextBtn").click(function(){
 });
 
 document.getElementById("btnctg").addEventListener("click", function(){
-    window.location.href = 'catalogo.html#catalogo';
+    window.location.href = 'catalogo.html';
     })
 
-    document.getElementById("btncdc").addEventListener("click", function(){
-        window.location.href = 'catalogo.html#carro';
-        })
+document.getElementById("btncdc").addEventListener("click", function(){
+    window.location.href = 'catalogo.html';
+    })
