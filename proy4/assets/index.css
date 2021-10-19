@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@1,300&display=swap");
+* {
+  margin: 10px solid #d1a171;
+  padding: 1px solid #d1a171;
+  background-color: #d1a171;
+}
+body {
+  background-color: #d1a171;
+}
+
+div {
+  text-align: end;
+  background-color: #d1a171;
+}
+
+br {
+  text-align: end;
+  background-color: #d1a171;
+}
+
+button {
+  border-radius: 15px;
+  font-size: 10px;
+  width: 180px;
+  height: 40px;
+  background-color: #d1a171;
+}
+
+button p {
+  border-radius: 15px;
+  text-align: center;
+  vertical-align: center;
+  font-size: 1.4em;
+  background-color: #d1a171;
+}
+
+img {
+  text-align: center;
+  display: inline-block;
+  width: 300px;
+  height: 300px;
+  background-color: #d1a171;
+}
+
+div.c-wrapper {
+  width: 10%; /* for example */
+  margin: 10px;
+  background-color: #d1a171;
+}
+
+body h1 {
+  text-align: center;
+  font-family: "Open Sans Condensed", sans-serif;
+  border-color: #d1a171;
+}
+
+h3 {
+  text-align: center;
+  font-family: "Open Sans Condensed", sans-serif;
+  border-color: #d1a171;
+}
+p {
+  text-align: center;
+  font-family: "Open Sans Condensed", sans-serif;
+  border-color: #d1a171;
+}
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  width: 22%; /* use this, or not */
+  margin: auto;
+  background-color: rgb(255, 255, 255);
+  border-color: #d1a171;
+  padding: 15px;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Open Sans Condensed", sans-serif;
+  border-color: #d1a171;}

@@ -1,0 +1,81 @@
+*{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+body{
+    background-color: #edbb99;
+}
+h1{
+    text-align: center;
+    margin-top: 2%;
+}
+fieldset{
+    width: 90%;
+    margin-left: 5%;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: white;
+
+}
+
+.contenedor{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.articulo{
+    width: 20%;
+    border: 4px solid black;
+    border-radius: 5px;
+    margin: 2%;
+}
+
+.articulo:hover{
+    transform: scale(1.15);
+
+}
+
+
+.portada{
+    width: 80%;
+    margin-left: 10%;
+    height: 60%;
+    margin-top: 10%;
+    
+}
+.contenedorcantidad{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 5%;
+    align-items: baseline;
+}
+
+.contenedorcantidad input{
+    width: 20%;
+    height: 20%;
+}
+
+.informacion{
+    text-align: center;
+    font-weight: bold;
+
+}
+
+.carrito{
+    margin-top: 20px;
+    width: 10%;
+    height: 30px;
+    margin-bottom: 20px;
+
+    margin-left: 87%;
+    border-radius: 5px;
+}
+.d-flex{
+    display: flex;
+}
+.justify-content-center{
+    justify-content: center;
+}
