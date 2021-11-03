@@ -1,0 +1,89 @@
+[
+    {
+        "marca": "Chevrolet",
+        "modelos": [
+            {
+                "modelo":"Beat",
+                "precio": 41290000,
+                "stock":20,
+                "año":2019
+            },
+            {
+                "modelo":"Joy",
+                "precio": 45990000,
+                "stock":30,
+                "año":2020
+            },
+            {
+                "modelo":"Traverse",
+                "precio": 185990000,
+                "stock":5,
+                "año":2021
+            },
+            {
+                "modelo":"Captiva",
+                "precio": 95990000,
+                "stock":10,
+                "año":2021
+            }
+        ]
+    },
+    {
+        "marca": "Renault",
+        "modelos": [
+            {
+                "modelo":"Kwid",
+                "precio": 39300000,
+                "stock":20,
+                "año":2021
+            },
+            {
+                "modelo":"Sandero",
+                "precio": 65990000,
+                "stock":15,
+                "año":2020
+            },
+            {
+                "modelo":"Logan",
+                "precio": 47900000,
+                "stock":20,
+                "año":2019
+            },
+            {
+                "modelo":"Koleos",
+                "precio": 118950000,
+                "stock":10,
+                "año":2018
+            }
+        ]
+    },
+    {
+        "marca": "Toyota",
+        "modelos": [
+            {
+                "modelo":"Yaris",
+                "precio": 58000000,
+                "stock":20,
+                "año":2019
+            },
+            {
+                "modelo":"Corolla",
+                "precio": 68950000,
+                "stock":15,
+                "año":2020
+            },
+            {
+                "modelo":"Prado",
+                "precio": 146990000,
+                "stock":20,
+                "año":2021
+            },
+            {
+                "modelo":"Hilux",
+                "precio": 165990000,
+                "stock":10,
+                "año":2021
+            }
+        ]
+    }
+]

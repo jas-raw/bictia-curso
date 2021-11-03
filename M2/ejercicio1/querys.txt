@@ -1,0 +1,98 @@
+db.vehiculos.insertMany([
+    {
+        "marca": "Chevrolet",
+        "modelo":"Beat",
+        "precio": 41290000,
+        "stock":20,
+        "año":2019
+    },
+    {
+        "marca": "Chevrolet",
+        "modelo":"Joy",
+        "precio": 45990000,
+        "stock":30,
+        "año":2020
+    },
+    {
+        "marca": "Chevrolet",
+        "modelo":"Traverse",
+        "precio": 185990000,
+        "stock":5,
+        "año":2021
+    },
+    {
+        "marca": "Chevrolet",
+        "modelo":"Captiva",
+        "precio": 95990000,
+        "stock":10,
+        "año":2021
+    },
+    {
+        "marca": "Renault",
+        "modelo":"Kwid",
+        "precio": 39300000,
+        "stock":20,
+        "año":2021
+    },
+    {
+        "marca": "Renault",
+        "modelo":"Sandero",
+        "precio": 65990000,
+        "stock":15,
+        "año":2020
+    },
+    {
+        "marca": "Renault",
+        "modelo":"Logan",
+        "precio": 47900000,
+        "stock":20,
+        "año":2019
+    },
+    {
+        "marca": "Renault",
+        "modelo":"Koleos",
+        "precio": 118950000,
+        "stock":10,
+        "año":2018
+    },
+    {
+        "marca": "Toyota",
+        "modelo":"Yaris",
+        "precio": 58000000,
+        "stock":20,
+        "año":2019
+    },
+    {
+        "marca": "Toyota",
+        "modelo":"Corolla",
+        "precio": 68950000,
+        "stock":15,
+        "año":2020
+    },
+    {
+        "marca": "Toyota",
+        "modelo":"Prado",
+        "precio": 146990000,
+        "stock":20,
+        "año":2021
+    },
+    {
+        "marca": "Toyota",
+        "modelo":"Hilux",
+        "precio": 165990000,
+        "stock":10,
+        "año":2021
+    }
+])
+
+db.vehiculos.find({"marca": "Toyota", "precio": {$gte: 90000000}})
+db.vehiculos.find({"marca": "Chevrolet", "precio": {$lte: 50000000}})
+db.vehiculos.findOne({"marca": "Renault", "modelo": "Koleos"},{"_id": 0, "stock": 1})
+db.vehiculos.find({"año":2020}).forEach(function(document){
+    document.precio = document.precio*1.1; 
+    db.vehiculos.updateOne({"_id": document._id},{$set: document});
+})
+db.vehiculos.find({"año":{$lte: 2019}}).forEach(function(document){
+    document.stock = document.stock+2; 
+    db.vehiculos.updateOne({"_id": document._id},{$set: document});
+})
