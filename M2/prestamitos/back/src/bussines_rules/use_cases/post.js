@@ -1,4 +1,4 @@
-const send_email = require("../../frameworks_and_drivers/helpers/mail")
+const send_email = require("../../frameworks_and_drivers/drivers/mail")
 
 function evaluate_credit(info){
     const { status, time, ing, email } = info
