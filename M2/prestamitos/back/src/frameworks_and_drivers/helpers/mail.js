@@ -14,7 +14,7 @@ let transporter = nodemailer.createTransport({
 async function send_email(email, message){
     console.log(emailPass, pass, process.env)
     let info = await transporter.sendMail({
-        from: `"Equipo prestamitos" <${email}>`,
+        from: `"Equipo prestamitos" <${emailPass}>`,
         to: email,
         subject: "Resultado de su solicitud",
         text: `Su resultado fue: ${message}`
