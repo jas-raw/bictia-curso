@@ -1,0 +1,52 @@
+<div class="container">
+    <div class="row h-100 justify-content-center align-items-center">
+        <div class="col-8">
+            <div class="my-2">
+                <label class="form-label" for="name">Nombre completo: </label>
+                <input [(ngModel)]="name" id="name" placeholder="Nombre completo" type="text" class="form-control">
+            </div>
+            <div class="my-2">
+                <label class="form-label" for="id">Identificación: </label>
+                <input [(ngModel)]="id" id="id" placeholder="Identificación" type="number" class="form-control">
+            </div>
+            <div class="my-2">
+                <label class="form-label" for="email">Correo electrónico: </label>
+                <input [(ngModel)]="email" id="email" placeholder="Correo electrónico" type="email" class="form-control">
+            </div>
+            <div class="my-2">
+                <label class="form-label" for="sit">Situación de empleo: </label>
+                <select (change)="changeStatus($event)" id="sit" class="form-select">
+                    <option value="Empleado">Empleado</option>
+                    <option value="Desempleado">Desempleado</option>
+                    <option value="Independiente">Independiente</option>
+                </select>
+            </div>
+            <div class="my-2">
+                <label class="form-label" for="salario">Salario: </label>
+                <input [(ngModel)]="salario" id="salario" placeholder="Salario" type="number" class="form-control">
+            </div>
+            <div class="my-2">
+                <label class="form-label" for="antiguedad">Antiguedad</label>
+                <input [(ngModel)]="antiguedad" id="antiguedad" placeholder="Antiguedad (años)" type="number" class="form-control">
+            </div>
+            <div class="my-2">
+                <button (click)="send()" class="btn btn-success">Enviar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div *ngIf="result.message !== ''" class="my-modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Su resultado:</h5>
+            </div>
+            <div class="modal-body">
+                <p>{{result.message}}</p>
+            </div>
+            <div class="modal-footer">
+                <button (click)="deleteResult()" type="button" class="btn btn-secondary"> Cerrar </button>
+            </div>
+        </div>
+    </div>
+</div>
