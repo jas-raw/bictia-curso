@@ -1,0 +1,142 @@
+{
+	"info": {
+		"_postman_id": "cfa37d62-7172-44f8-bb74-4ce31041cf01",
+		"name": "BC-Final",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Busqueda inmuebles",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"no_banos\": 2,\n    \"no_habitaciones\": 4,\n    \"no_pisos\": 4,\n    \"patio\": true,\n    \"valor\": 100000,\n    \"sector\": \"Bogota\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v1/inmuebles?no_banos=2&no_habitaciones=2&no_pisos=2&patio=true&valor=50000000&sector=Bogotá",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"inmuebles"
+					],
+					"query": [
+						{
+							"key": "no_banos",
+							"value": "2"
+						},
+						{
+							"key": "no_habitaciones",
+							"value": "2"
+						},
+						{
+							"key": "no_pisos",
+							"value": "2"
+						},
+						{
+							"key": "patio",
+							"value": "true"
+						},
+						{
+							"key": "valor",
+							"value": "50000000"
+						},
+						{
+							"key": "sector",
+							"value": "Bogotá"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Inmueble",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21icmUiOiJKb25uYXRoYW4gU2FuZGlubyIsImVtYWlsIjoiamFzYW5kaW5vYUBnbWFpbC5jb20iLCJ0ZWxlZm9ubyI6MzIwMzY2NTMxNSwiaWF0IjoxNjM5NzA5OTU3fQ.Iw_jzKrSgw3-y5ddkexrSbRo-Ry9eWt3WylrCpcCP7E",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"tipo\": \"apartamento\",\n    \"no_habitaciones\": 4,\n    \"patio\": true,\n    \"no_pisos\": 1,\n    \"sector\": \"Bogota\",\n    \"cocina_intergral\": true,\n    \"descripcion\": \"casa\",\n    \"valor\": 20000000,\n    \"imagenes\": [\"\"],\n    \"no_banos\": 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v1/inmuebles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"inmuebles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"xxx@example.com\",\n    \"password\": \"example\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v1/users/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

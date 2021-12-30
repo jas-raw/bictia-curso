@@ -1,0 +1,13 @@
+<nav class="navbar navbar-dark bg-primary ps-5">
+        <a class="navbar-brand " [routerLink]="['']"><b>N</b>ode<b>H</b>ouse</a>
+        <button [routerLink]="['create']" *ngIf="user" class="btn btn-primary">
+            <span>Crear</span>
+        </button>
+        <button (click)="salir()" *ngIf="user" class="btn btn-primary">
+            <span>Salir</span>
+        </button>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            <i class="fas fa-user-check log"></i>
+        </button>
+    
+</nav>

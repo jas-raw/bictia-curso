@@ -1,0 +1,38 @@
+<div class="" id="containerCards">
+    <h1 class="text-center">Casas disponibles</h1>
+    <br><br><br>
+    <div class="row justify-content-center row-cols-1 row-cols-md-3 g-4">
+        <div *ngFor='let h of houses' class="col-4">
+            <div class="card h-100">
+                <img [src]="h.imagenes[0] ? fileOut(h.imagenes[0]) : defaultImg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Sector: {{h.sector}}</h5>
+                    <div>
+                        <span>Habitaciones: {{h.no_habitaciones}}</span>
+                    </div>
+                    <div>
+                        <span>Baños: {{h.no_banos}}</span>
+                    </div>
+                    <div>
+                        <span>Pisos: {{h.no_pisos}}</span>
+                    </div>
+                    <div>
+                        <span>Patio: {{h.patio ? 'Si' : 'No'}}</span>
+                    </div>
+                    <div>
+                        <span class="h6">Precio: {{h.valor}}</span>
+                    </div>
+                    <div>
+                        <span class="h6">Asesor: {{h.nombre_asesor}}</span>
+                    </div>
+                    <div>
+                        <span class="h6">Tel: {{h.telefono_asesor}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="houses.length === 0" class="col-auto py-2">
+            <span class="h4">No hay resultados para su búsqueda</span>
+        </div>
+    </div>
+</div>

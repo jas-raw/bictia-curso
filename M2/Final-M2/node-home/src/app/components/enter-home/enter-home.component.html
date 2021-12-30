@@ -1,0 +1,44 @@
+<h1 class="text-center ">Ingresa los datos del nuevo inmueble</h1>
+<br>
+<div class="container col-md-6">
+        <div class="row">
+            <div class="col">
+                <input [(ngModel)]="rooms" type="number" id="numberRoom" class="form-control" placeholder="N°Habitaciones">
+            </div>
+            <div class="col">
+                <input [(ngModel)]="bathrooms" type="number" id="numberBath" class="form-control" placeholder="N°Baños">
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col">
+                <select (change)="changePatio($event)" class="form-select" aria-label="Default select example" id="playground">
+                    <option selected value="null">Patio</option>
+                    <option value="true">Si</option>
+                    <option value="false">No</option>
+                </select>
+            </div>
+            <div class="col">
+                <input [(ngModel)]="floors" type="number" id="numberFloors" class="form-control" placeholder="N°Pisos">
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col">
+                <input [(ngModel)]="sector" type="text" id="sector" class="form-control" placeholder="Sector">
+            </div>
+            <div class="col">
+                <input [(ngModel)]="value" type="number" id="budget" class="form-control" placeholder="Presupuesto">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col mt-4">
+                <input (change)="fileIn($event)" multiple accept=".jpg, .jpeg, .png" type="file" class="form-control" id="customFile" />
+            </div>
+        </div>
+        <br>
+        <div class="text-center">
+            <button [disabled]="disableIn"  (click)='crear($event)' class="btn btn-primary text-center" type="submit">Ingresar</button>
+        </div>
+</div>
+

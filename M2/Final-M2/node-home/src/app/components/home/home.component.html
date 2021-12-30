@@ -1,0 +1,113 @@
+<div class="background-house">
+  <br>
+  <h1 class="text-center ">¿Como quieres tu hogar?</h1>
+  <br>
+
+  <div class="container col-md-9">
+    <div class="row">
+      <div class="col-3">
+        <img class="img-fluid" src="../../../assets/img/N-removebg-preview.png" alt="">
+      </div>
+      <div class="col-9">
+          <div class="row">
+            <div class="col">
+              <input [(ngModel)]="rooms" type="number" id="numberRoom" class="form-control" placeholder="N°Habitaciones">
+            </div>
+            <div class="col">
+              <input [(ngModel)]="bathrooms" type="number" id="numberBath" class="form-control" placeholder="N°Baños">
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col">
+              <select (change)="changePatio($event)" class="form-select" aria-label="Default select example" id="playground">
+                <option selected value="null">Patio</option>
+                <option value="true">Si</option>
+                <option value="false">No</option>
+              </select>
+            </div>
+            <div class="col">
+              <input [(ngModel)]="floors" type="number" id="numberFloors" class="form-control" placeholder="N°Pisos">
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col">
+              <input [(ngModel)]="sector" type="text" id="sector" class="form-control" placeholder="Sector">
+            </div>
+            <div class="col">
+              <input [(ngModel)]="value" type="number" id="budget" class="form-control" placeholder="Presupuesto">
+            </div>
+          </div>
+          <br>
+          <div class="text-center">
+            <a (click)="onSearch($event)" class="btn btn-primary text-center" type="submit">Buscar</a>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br><br><br>
+<div class="" id="containerCards">
+  <h2 class="text-center">Publicaciones destacadas</h2>
+  <br><br><br>
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div *ngFor="let h of houses" class="col-4">
+      <div class="card h-100">
+        <img [src]="h.imagenes[0] ? fileOut(h.imagenes[0]) : defaultImg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Sector: {{h.sector}}</h5>
+          <div>
+              <span>Habitaciones: {{h.no_habitaciones}}</span>
+          </div>
+          <div>
+              <span>Baños: {{h.no_banos}}</span>
+          </div>
+          <div>
+              <span>Pisos: {{h.no_pisos}}</span>
+          </div>
+          <div>
+              <span>Patio: {{h.patio ? 'Si' : 'No'}}</span>
+          </div>
+          <div>
+              <span class="h6">Precio: {{h.valor}}</span>
+          </div>
+          <div>
+            <span class="h6">Asesor: {{h.nombre_asesor}}</span>
+          </div>
+          <div>
+            <span class="h6">Tel: {{h.telefono_asesor}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="houses.length === 0" class="col-auto py-2">
+      <span class="h4">No hay casas aún</span>
+  </div>
+  </div>
+</div>
+<!-- Modal login -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-center" id="staticBackdropLabel">Ingrese sus datos</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="col">
+          <input [(ngModel)]="user" type="email" id="email" class="form-control" placeholder="Usuario">
+        </div>
+        <br>
+        <div class="col">
+          <input [(ngModel)]="password" type="password" id="password" class="form-control" placeholder="contraseña">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button data-bs-dismiss="modal" (click)='login($event)' type="button" class="btn btn-primary">Ingresar</button>
+      </div>
+    </div>
+  </div>
+  
+</div>
